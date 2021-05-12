@@ -31,6 +31,7 @@ var simpleRouter = function(request){
     return null;
 }
 
+
 //function to respond with form on GET request
 var handleFormGet = function(request, response){
     response.writeHead(200, {"Content-Type": "text/html"});
