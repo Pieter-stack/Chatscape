@@ -72,8 +72,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-<!--mockup in assets-->
+ <img src="assets/Chatscape_page.png" alt="mockup" width="" height="600" align="center">
+
+<br></br>
 
 
 
@@ -143,20 +144,20 @@ See the [open issues](https://github.com/Pieter-stack/Chatscape/issues) for a li
 For this project I did some research on chatroom apps and then I put together a moodboard of all my findings:
 
 
-  <img src="assets/moodboard.png" alt="mockup" width="" height="600" align="center">
+  <img src="assets/Chatscape_moodboard.png" alt="mockup" width="80%" height="600" align="center">
 <br></br>
 
 ### Wireframes
 
 I made multiple wireframes and transformed them into initial ideas with my idea to have themes for the users to choose from:
-  <img src="assets/wireframes.png" alt="mockup" width="" height="600" align="center">
+  <img src="assets/Chatscape_wireframes.png" alt="mockup" width="" height="600" align="center">
 
 I didn't implement the themes into my project at this time.
 <br></br>
 
 ### User-flow diagram
 After that, I created a simple userflow diagram, which depicts the basic information flow when the user interacts with the website.
-  <img src="assets/userflow.png" alt="mockup" width="" height="600" align="center">
+  <img src="assets/Chatscape_userflow.png" alt="mockup" width="" height="600" align="center">
 <br></br>
 
 # Development process and implementation
@@ -172,7 +173,7 @@ Roadmap of the last 9 weeks, here's a visual representation of my success and ch
 
 This project can still be improved to have single cob=nversation with users rather than groupchats and also add themes and colours for text blocks.
 
-_<img src="assets/home.png" alt="mockup" width="700" height="" align="center">
+_<img src="assets/Chatscape_chatspage.png" alt="mockup" width="700" height="" align="center">
   <br></br>
 _For more examples, please refer to the [Documentation](https://example.com)_
 
