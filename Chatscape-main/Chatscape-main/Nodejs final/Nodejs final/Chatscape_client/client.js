@@ -3,6 +3,11 @@ var querystring = require("querystring");
 var fs = require("fs");
 var templates = require("es6-template-strings");
 
+var ofUSers =[{Username :"Pieter", Password :"Secret"},
+{Username :"Armand", Password :"Nodejs"},
+{Username :"Bernadette", Password :"Purple"},
+{Username :"Isla", Password :"CoolBeans"},
+{Username :"Kyle", Password :"Hello World"}];
 //host my files
 var static = require("node-static");
 var fileServer = new static.Server("./public");
@@ -11,7 +16,7 @@ var fileServer = new static.Server("./public");
 //init my client socket
 var io = require("socket.io-client");
 //connect client to server
-var socket = io("http://localhost:8888/", {transports:['websocket']});
+var socket=io("http://localhost:8888/", {reconnect:true, transports:['websocket']});
 
 
 //function to respond with the form on GET request
@@ -49,23 +54,56 @@ var handleFormPost = function(request, response){
 
         var post = querystring.parse(payload);
 
-        //request login on server
+        //for loop met 1 if else
+        //function needed
+
+        function login(){
             socket.emit("login:request",post);
+            fs.readFile("templates/home.html", "utf8", function(err, data) {
+            if(err) {throw err;}
+            //compile template first to include our JS post data
+            var compiled = templates(data, {username: post["username"]});
+            response.end(compiled);
+               });
+        };
+
+        if(post.username === "Pieter" && post.password === "Secret"){
+           login();
+            
+     
+        }else if(post.username === "Armand" && post.password === "Nodejs"){
+            login();
+        }else if(post.username === "Bernadette" && post.password === "purple"){
+            login();
+        }else if(post.username === "Isla" && post.password === "coolbeans"){
+            login();
+        }else if(post.username === "Kyle" && post.password === "Hello World"){
+            login();
+        }else{
+            fs.readFile("templates/errForm.html", "utf8", function(err, data) {
+            if(err) {throw err;}
+            response.end(data);
+            
+        });  
+        }
+
+        // //request login on server
+        //     socket.emit("login:request",post);
         
 
 
 
 
-        fs.readFile("templates/home.html", "utf8", function(err, data) {
-            if(err) {throw err;}
+        // fs.readFile("templates/home.html", "utf8", function(err, data) {
+        //     if(err) {throw err;}
 
 
-            //compile template first to include our JS post data
-            var compiled = templates(data, {username: post["username"]});
+        //     //compile template first to include our JS post data
+        //     var compiled = templates(data, {username: post["username"]});
 
-            response.end(compiled);
+        //     response.end(compiled);
             
-        });
+        // });
 
     });
 
