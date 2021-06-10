@@ -1,1 +1,1 @@
-[{"author":" Pieter","message":"Hello"},{"author":" Armand","message":"Hello"}]
+[{"author":" Pieter","message":"Hello"},{"author":" Armand","message":"Hello"},{"author":" Pieter","message":"Hello there!"},{"author":" Armand","message":"Oh hi there!"},{"author":" Armand","message":"Hello"},{"author":" Pieter","message":"hello there"}]

@@ -11,7 +11,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Pieter-stack/Chatscape">
-    <img src="assets/Chatscape_logo.png" alt="Logo" width="100%" height="150">
+    <img src="https://github.com/Pieter-stack/Chatscape/assets/Chatscape_logo.png" alt="Logo" width="100%" height="150">
   </a>
 
   <h3 align="center">Chatscape</h3>
